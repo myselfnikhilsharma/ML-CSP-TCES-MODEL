@@ -616,22 +616,23 @@
       <div class="info-box">
         <p>
           <b>About This Tool</b><br><br>
-          This machine learning application predicts the optimal <b>Levelized Cost of Electricity (LCOE)</b> and <b>Energy Storage Cost (ESC)</b> for concentrated solar power plants with thermochemical energy storage.
+          This ML‑based estimator delivers rapid, system‑level predictions of the optimal <b>Levelized Cost of Electricity (LCOE)</b> and <b>Energy Storage Cost (ESC)</b> for concentrated solar power plants integrated with thermochemical energy storage (CSP–TES). It is intended for material screening and early‑stage techno‑economic evaluation, removing the need to run computationally intensive optimization for every candidate material.
           <br><br>
-          <b>CSP-TES System Consists of:</b><br>
-          • Solar Collectors<br>
-          • High-Temperature Receivers<br>
-          • Thermochemical Energy Storage Reactors<br>
-          • Power Conversion Cycle<br>
-          <br>
-          The model is trained on data from a stochastic programming-based optimization model that considers seasonal solar variability, material properties, and techno-economic constraints for a 100 MW CSP-TES plant.
+          <b>CSP–TES System Overview</b><br>
+          • Solar collectors that concentrate sunlight<br>
+          • High‑temperature receivers that convert radiation to heat<br>
+          • Thermochemical energy‑storage reactors based on reversible redox chemistry<br>
+          • High‑efficiency s‑CO₂ Brayton power conversion cycle
           <br><br>
-
-          <b>Key Features:</b><br>
-          • Instant predictions (seconds vs hours of optimization)<br>
-          • Considers 9 material properties<br>
-          • Based on redox reaction: MOₓ ⇌ MOᵧ + ν O₂<br>
-          • Open-loop configuration with s-CO₂ Brayton cycle
+          <b>Storage Chemistry</b><br>
+          The underlying TES operates via a reversible redox reaction in an open‑loop configuration (no oxygen storage/compression required):<br>
+          MOₓ ⇌ MOᵧ + ν O₂
+          <br><br>
+          
+          <b>Inputs & Scope</b><br>
+          The estimator accepts nine key material and process properties (thermophysical, stoichiometric, and economic) and maps them to system‑optimal LCOE and ESC, capturing complex nonlinear interactions learned from full system optimizations.
+          <br><br>
+          
         </p>
       </div>
     </div>
