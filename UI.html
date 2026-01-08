@@ -616,7 +616,7 @@
       <div class="info-box">
         <p>
           <b>About This Tool</b><br><br>
-          This ML‑based estimator delivers rapid, system‑level predictions of the optimal <b>Levelized Cost of Electricity (LCOE)</b> and <b>Energy Storage Cost (ESC)</b> for concentrated solar power plants integrated with thermochemical energy storage (CSP–TES). It is intended for material screening and early‑stage techno‑economic evaluation, removing the need to run computationally intensive optimization for every candidate material.
+          This ML‑based estimator delivers rapid, system‑level predictions of the optimal <b>Levelized Cost of Electricity (LCOE)</b> and <b>Energy Storage Cost (ESC)</b> for concentrated solar power plants integrated with thermochemical energy storage (CSP–TES). It is intended for material screening and early‑stage techno‑economic evaluation, removing the need to run computationally intensive optimization for every candidate material. The plant location is in Daggett, California with a capacity of 100 MW.
           <br><br>
           <b>CSP–TES System Overview</b><br>
           • Solar collectors that concentrate sunlight<br>
@@ -633,22 +633,26 @@
           The estimator accepts nine key material and process properties (thermophysical, stoichiometric, and economic) and maps them to system‑optimal LCOE and ESC, capturing complex nonlinear interactions learned from full system optimizations.
           <br><br>
           
+          <b>Assumptions and Calculations</b><br>
+          The predictions are based on optimization model which uses thermodynamic equilibrium assumptions (100% conversion, no side products, and stable material) and neglects reaction kinetics.
+          <br><br>
+          
         </p>
       </div>
     </div>
 
     <!-- RIGHT -->
     <div class="right-column">
-      <h2>Thermal Energy System Estimator</h2>
+      <h2>Optimal LCOE and ESC Estimator</h2>
 
       <form id="predictionForm" novalidate>
 
         <!-- ALL TEXT INPUTS AS REQUESTED -->
 
-        <label>Equilibrium Temperature (K) <span class="info-icon" data-tooltip="Temperature in K at which MOₓ ⇌ MOᵧ is at thermodynamic equilibrium.">i</span></label>
+        <label>Equilibrium temperature  <span class="info-icon" data-tooltip="Temperature in K at partial pressure of O2 at 0.21 atm (K)">i</span></label>
         <input type="text" id="f1" name="f1" placeholder="Enter value (e.g., 1200)" required />
 
-        <label>Heat of Reaction (kJ/mol) <span class="info-icon" data-tooltip="Reaction enthalpy per mole of MOₓ in kJ·mol⁻¹. Positive = endothermic (charging).">i</span></label>
+        <label>Heat of Reaction at 298 K (kJ/kg) <span class="info-icon" data-tooltip="Reaction enthalpy per kg of MOₓ in kJ/kg. Positive = endothermic (charging).">i</span></label>
         <input type="text" id="f2" name="f2" placeholder="Enter value (e.g., 178.5)" required />
 
         <label>Specific Heat Capacity of MOₓ (kJ/kg-K)</label>
@@ -663,7 +667,7 @@
         <label>Density of MOᵧ (g/cm³)</label>
         <input type="text" id="f6" name="f6" placeholder="Enter value (e.g., 2.71)" required />
 
-        <label>Price ($/MT) <span class="info-icon" data-tooltip="Material purchase price in USD per metric ton (USD/MT).">i</span></label>
+        <label>Price ($/kg) <span class="info-icon" data-tooltip="Material purchase price in USD per kilogram ($/kg).">i</span></label>
         <input type="text" id="f7" name="f7" placeholder="Enter value (e.g., 450.00)" required />
 
         <label>Stoichiometric Coefficient of O₂ <span class="info-icon" data-tooltip="Stoichiometric O₂ coefficient ν in MOₓ ⇌ MOᵧ + ν O₂ (moles O₂ per mole MOₓ).">i</span></label>
